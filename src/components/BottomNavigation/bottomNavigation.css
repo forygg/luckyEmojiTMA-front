@@ -1,0 +1,32 @@
+/* Bottom Navigation */
+.bottom-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111827;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.25rem;
+}
+
+.nav-item p {
+    color: white;
+    font-size: 0.75rem;
+}
+
+.nav-item.active p {
+    color: #00f5ff; /* Highlight active icon with blue */
+}

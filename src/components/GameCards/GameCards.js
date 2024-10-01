@@ -1,8 +1,10 @@
-import GameCard from './GameCard';
-import ticket from '../assets/ticket.svg';
+import GameCard from '../GameCard/GameCard';
+import ticket from '../../assets/ticket.svg';
+import "./gameCards.css";  // Import the custom CSS file
+
 const GameCards = () => {
     return (
-        <div className="flex justify-around mt-4">
+        <div className="game-cards-container">
             <GameCard
                 title="LuckyTicket"
                 description="Win every hour! Guaranteed prize for all participants."
@@ -16,4 +18,5 @@ const GameCards = () => {
         </div>
     );
 };
+
 export default GameCards;

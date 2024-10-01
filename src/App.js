@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import UserInfoBar from './components/UserInfoBar';
-import GameIntroduction from './components/GameIntroduction';
-import GameCards from './components/GameCards';
-import BottomNavigation from './components/BottomNavigation';
-import bg from './assets/background.jpeg';
+import UserInfoBar from './components/UserInfoBar/UserInfoBar';
+import GameIntroduction from './components/GameIntroduction/GameIntroduction';
+import GameCards from './components/GameCards/GameCards';
+import BottomNavigation from './components/BottomNavigation/BottomNavigation';
+import './App.css';
 
 function App() {
     useEffect(() => {
@@ -12,12 +12,11 @@ function App() {
         tg.expand(); // Expands the app to full-screen
     }, []);
 
-
     return (
         <div
-            className="flex flex-col pt-20 px-5 h-screen bg-cover bg-center"
-            style={{ backgroundImage: `url(${bg})` }}
+            className="container"
         >
+            <header className="header">Games</header>
             <UserInfoBar />
             <GameIntroduction />
             <GameCards />
