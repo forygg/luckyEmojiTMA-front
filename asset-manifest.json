@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/luckyEmojiTMA-front/static/css/main.bef13260.css",
-    "main.js": "/luckyEmojiTMA-front/static/js/main.c5dd0185.js",
+    "main.css": "/luckyEmojiTMA-front/static/css/main.7e106a8c.css",
+    "main.js": "/luckyEmojiTMA-front/static/js/main.29c29826.js",
     "static/js/453.6a52f192.chunk.js": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js",
+    "static/media/background.jpeg": "/luckyEmojiTMA-front/static/media/background.ca661f481bff9c01bef0.jpeg",
+    "static/media/ticket.svg": "/luckyEmojiTMA-front/static/media/ticket.c120d4bfeff238f95de7c0bf08791464.svg",
+    "static/media/avatar.svg": "/luckyEmojiTMA-front/static/media/avatar.d4a69d14a01df8a8a4661f87fcdaf45b.svg",
+    "static/media/airdrop_icon.svg": "/luckyEmojiTMA-front/static/media/airdrop_icon.76461026464e08a369eccfcf3ddb72c7.svg",
+    "static/media/tasks.svg": "/luckyEmojiTMA-front/static/media/tasks.bcd053610300eb8020517f870b0432bf.svg",
+    "static/media/games.svg": "/luckyEmojiTMA-front/static/media/games.7d5d31f069ffea72d13cad379c9e9b2b.svg",
+    "static/media/paytable.svg": "/luckyEmojiTMA-front/static/media/paytable.8c38a443ebb9e538760dc46765ce0532.svg",
+    "static/media/leader.svg": "/luckyEmojiTMA-front/static/media/leader.27d1e5c0889a333cfbec6fb6e5a3bd6a.svg",
+    "static/media/profile.svg": "/luckyEmojiTMA-front/static/media/profile.8603b90b302bad599bd3a6d5b23ad26f.svg",
     "index.html": "/luckyEmojiTMA-front/index.html",
-    "main.bef13260.css.map": "/luckyEmojiTMA-front/static/css/main.bef13260.css.map",
-    "main.c5dd0185.js.map": "/luckyEmojiTMA-front/static/js/main.c5dd0185.js.map",
+    "main.7e106a8c.css.map": "/luckyEmojiTMA-front/static/css/main.7e106a8c.css.map",
+    "main.29c29826.js.map": "/luckyEmojiTMA-front/static/js/main.29c29826.js.map",
     "453.6a52f192.chunk.js.map": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bef13260.css",
-    "static/js/main.c5dd0185.js"
+    "static/css/main.7e106a8c.css",
+    "static/js/main.29c29826.js"
   ]
 }
