@@ -2,8 +2,9 @@
 .user-info-bar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 30px 7%;
+    justify-content: space-between;
+    padding: 30px 5%;
+
 }
 
 .user-container {
@@ -28,7 +29,7 @@
 
 .username {
     margin: 3px;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #e4e6ea;
     line-height: 15.73px;
@@ -38,9 +39,9 @@
 }
 
 .status {
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     color: #ffffff;
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
     margin-left: 7px;
     font-style: italic;
     font-weight: 400;

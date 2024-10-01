@@ -18,7 +18,7 @@ const BottomNavigation = () => {
             </div>
             <div className="nav-item">
                 <img src={gamesIcon} alt="Games" className="nav-icon" />
-                <p className="nav-text">Games</p>
+                <p className="nav-text-selected">Games</p>
             </div>
             <div className="nav-item">
                 <img src={leaderIcon} alt="Leader" className="nav-icon" />

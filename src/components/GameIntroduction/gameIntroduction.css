@@ -1,16 +1,16 @@
 /* Game Introduction */
 .game-introduction {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     color: white;
     font-family: 'Inter', sans-serif;
 }
 
 .game-introduction p {
+    text-indent: 1rem;
     color: #E4E6EA;
-    font-size: 9px;
+    font-size: 0.8rem;
     font-style: italic;
     font-weight: 400;
-    line-height: 10.89px;
     text-align: left;
 }

@@ -13,14 +13,14 @@ function App() {
     }, []);
 
     return (
-        <div
-            className="container"
-        >
+        <div className="container">
             <header className="header">Games</header>
-            <UserInfoBar />
-            <GameIntroduction />
-            <GameCards />
-            <BottomNavigation />
+            <UserInfoBar/>
+            <div className="my-rectangle">
+                <GameIntroduction/>
+                <GameCards/>
+                <BottomNavigation/>
+            </div>
         </div>
     );
 }

@@ -2,14 +2,13 @@
 .bottom-navigation {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    background-color: #111827;
-    padding: 1rem;
+    background-color: #1d1d1d;
+    padding: 0.5rem;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #3B3A3A;
 }
 
 .nav-item {
@@ -17,16 +16,24 @@
 }
 
 .nav-item img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 0.25rem;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.1rem;
 }
+
+
 
 .nav-item p {
-    color: white;
-    font-size: 0.75rem;
+    color: #4C4D4F;
+    font-size: 0.55rem;
+    margin: 0;
+    font-weight: 500;
+    line-height: 8.47px;
+    letter-spacing: 0.14em;
+    text-align: center;
 }
 
-.nav-item.active p {
-    color: #00f5ff; /* Highlight active icon with blue */
+
+p.nav-text-selected{
+    color: #E4E6EA;
 }
