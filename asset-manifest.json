@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/luckyEmojiTMA-front/static/css/main.bef13260.css",
+    "main.js": "/luckyEmojiTMA-front/static/js/main.c5dd0185.js",
+    "static/js/453.6a52f192.chunk.js": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js",
+    "index.html": "/luckyEmojiTMA-front/index.html",
+    "main.bef13260.css.map": "/luckyEmojiTMA-front/static/css/main.bef13260.css.map",
+    "main.c5dd0185.js.map": "/luckyEmojiTMA-front/static/js/main.c5dd0185.js.map",
+    "453.6a52f192.chunk.js.map": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bef13260.css",
+    "static/js/main.c5dd0185.js"
+  ]
+}
