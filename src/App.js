@@ -12,9 +12,6 @@ function App() {
         tg.expand(); // Expands the app to full-screen
     }, []);
 
-    const closeApp = () => {
-        window.Telegram.WebApp.close();
-    };
 
     return (
         <div
