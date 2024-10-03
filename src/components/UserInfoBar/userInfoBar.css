@@ -99,7 +99,7 @@
     color: white;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 350px) {
     .coin-count {
         font-size: 0.75rem;
     }
