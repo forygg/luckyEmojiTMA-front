@@ -25,7 +25,12 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js">
+      window.Telegram.WebApp.isVerticalSwipesEnabled = false;
+      window.Telegram.WebApp.ready()
+      window.Telegram.WebApp.expand()
+      window.Telegram.WebApp.disableVerticalSwipes()
+    </script>
 
   </head>
   <body>
