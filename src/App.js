@@ -19,8 +19,8 @@ function App() {
             <div className="my-rectangle">
                 <GameIntroduction/>
                 <GameCards/>
-                <BottomNavigation/>
             </div>
+            <BottomNavigation/>
         </div>
     );
 }
