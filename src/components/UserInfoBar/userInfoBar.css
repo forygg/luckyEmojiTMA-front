@@ -56,12 +56,12 @@
     justify-content: space-between;
     height: 70%;
     width: 30%;
-    padding: 1% 2%; /* Add more padding for a larger button */
-    border-radius: 30px; /* Round the edges */
+    padding: 1% 2%;
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 0, 255, 0.2); /* Slight border */
+    border: 2px solid rgba(255, 0, 255, 0.2);
     position: relative;
-    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.5); /* Glowing pink shadow */
+    box-shadow: 0 0 5px 2px rgba(255, 0, 255, 0.5);
 }
 
 .coin-container::before {
@@ -72,8 +72,8 @@
     right: 0;
     bottom: 0;
     border-radius: 30px;
-    box-shadow: 0 0 20px 5px rgba(255, 0, 255, 0.5); /* Pink outer glow effect */
-    z-index: -1; /* Make sure the shadow is behind the button */
+    box-shadow: 0 0 20px 5px rgba(255, 0, 255, 0.5);
+    z-index: -1;
 }
 
 .coin-icon {
@@ -95,7 +95,7 @@
     letter-spacing: -0.03em;
     text-align: center;
     width: 70%;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: white;
 }
 

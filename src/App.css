@@ -10,6 +10,7 @@
   background-position: center;
   overflow: hidden;
   position: fixed;
+  min-height: 0;
 }
 
 .header {
@@ -35,7 +36,7 @@
   width: 105%;
   height: 100%;
   background: #0000004D;
-
+  min-height: 0;
   box-shadow: inset 0 0 5px 2px rgba(0, 25, 254, 0.4),
   inset 0 0 2px 2px rgba(31, 156, 246, 0.4),
   0 0 2px 2px rgba(31, 156, 246, 0.4),
