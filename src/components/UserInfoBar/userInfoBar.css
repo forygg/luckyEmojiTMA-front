@@ -113,4 +113,23 @@
     }
     
 }
+@media (max-width: 323px) {
+    .coin-count {
+        font-size: 0.65rem;
+    }
+
+}
+@media (max-width: 313px) {
+    .coin-count {
+        font-size: 0.55rem;
+    }
+
+}
+@media (max-width: 304px) {
+    .coin-count {
+        font-size: 0.45rem;
+    }
+
+}
+
 

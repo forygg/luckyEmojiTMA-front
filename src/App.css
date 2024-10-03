@@ -1,4 +1,9 @@
-
+/* Ensure the parent element has position: relative */
+body {
+  position: relative;
+  height: 100vh; /* Ensure the body takes the full viewport height */
+  overflow: hidden; /* Prevent body from scrolling */
+}
 
 .container {
   display: flex;
@@ -9,7 +14,11 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  position: fixed;
+  position: relative; /* Change to relative */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   min-height: 0;
 }
 
@@ -29,17 +38,18 @@
 .my-rectangle {
   align-self: center;
   padding-top: 0.4rem;
+  padding-bottom: 4.2rem;
   border-radius: 55px;
   border-top: 0 solid transparent;
   border-right: 0 solid transparent;
   border-left: 0 solid transparent;
   width: 105%;
-  height: 100%;
+  height: calc(100% - 50px); /* Adjust height to account for bottom-navigation */
   background: #0000004D;
   min-height: 0;
   box-shadow: inset 0 0 5px 2px rgba(0, 25, 254, 0.4),
   inset 0 0 2px 2px rgba(31, 156, 246, 0.4),
   0 0 2px 2px rgba(31, 156, 246, 0.4),
   0 0 7px 2px rgba(0, 25, 254, 0.4);
-  overflow: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
