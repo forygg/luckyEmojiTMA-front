@@ -1,38 +1,62 @@
 /* Game Cards */
 .game-cards-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-    padding: 0 2rem;
-    gap: 1rem;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .game-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(33, 4, 53, 0.35);
+    padding: 0.2rem;
+    border: 1px solid rgba(31, 40, 145, 1);
+    border-radius: 30px;
     text-align: center;
-    width: 140px; /* Adjust width as per the design */
-    height: 200px; /* Adjust height */
+    height: 11.5rem;
+    width: 8.5rem;
     position: relative;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 25px -13px rgba(242, 219, 10, 0.99);
+
 }
 
 .game-card img {
-    margin: 0 auto;
-    width: 60px;
-    height: auto;
-    margin-bottom: 1rem;
+    width: 90%;
+    height: 30%;
+    margin-top: 10%;
+}
+
+.game-card:nth-child(2) img{
+    width: 70%;
+    height: 30%;
+    margin-top: 10%;
 }
 
 .game-card h3 {
+    font-family: Inter, system-ui;
+    font-weight: 600;
+    text-align: center;
     color: white;
-    font-weight: bold;
-    font-size: 1.125rem;
+    width: 80%;
+    font-size: 0.95rem;
+    margin: 4% 0 8%;
+    letter-spacing: .1rem;
 }
 
 .game-card p {
-    color: #9ca3af;
-    font-size: 0.75rem;
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: 0;
+    height: 20%;
+    width: 80%;
+    color: #E4E6EA;
+    font-size: 60%;
+    font-family: Inter, system-ui;
+    font-weight: 400;
+    line-height: 0.85rem;
+    text-align: center;
 }
 

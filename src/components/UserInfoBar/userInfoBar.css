@@ -49,18 +49,19 @@
     letter-spacing: 0.14em;
 }
 
+
 .coin-container {
     display: flex;
     align-items: center;
     justify-content: left;
     height: 70%;
-    width: 30%;/* Adjust width to your design */
+    width: 30%;
     padding: 1% 2%; /* Add more padding for a larger button */
     border-radius: 30px; /* Round the edges */
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Slight border */
+    background-color: rgba(255, 255, 255, 0.39);
+    border: 2px solid rgba(255, 0, 255, 0.2); /* Slight border */
     position: relative;
-    box-shadow: 0 0 10px 5px rgba(255, 0, 255, 0.2); /* Glowing pink shadow */
+    box-shadow: 0 0 5px 2px rgba(255, 0, 255, 0.5); /* Glowing pink shadow */
 }
 
 .coin-container::before {
@@ -89,10 +90,12 @@
 }
 
 .coin-count { /* Slightly larger font */
-    width: 70%;
+    font-weight: 700;
+    line-height: 13.31px;
+    letter-spacing: -0.03em;
     text-align: center;
+    width: 70%;
     font-size: 0.875rem;
-    font-weight: bold;
     color: white;
 }
 

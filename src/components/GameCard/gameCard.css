@@ -1,26 +1,5 @@
-/* src/components/GameCard/gameCard.css */
-
-.game-card {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    padding: 1rem; /* Tailwind p-4 */
-    border-radius: 0.5rem; /* Tailwind rounded-lg */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-lg */
-    text-align: center; /* Tailwind text-center */
-}
-
-.game-card img {
-    margin: 0 auto;
-    width: 80px;
-    height: 37.4px;
-    margin-bottom: 1rem; /* Tailwind mb-4 */
-}
-
-.game-card h3 {
-    color: white; /* Tailwind text-white */
-    font-weight: 600; /* Tailwind font-semibold */
-}
-
-.game-card p {
-    color: #9ca3af; /* Tailwind text-gray-400 */
-    font-size: 0.875rem; /* Tailwind text-sm */
+.game-card-divider{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin-top: 10%
 }
