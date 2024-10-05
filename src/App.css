@@ -1,7 +1,9 @@
-/* Ensure the parent element has position: relative */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body {
+    font-family: 'Inter', system-ui, sans-serif;
   position: relative;
-  height: 95%; /* Ensure the body takes the full viewport height */
+  height: 100%; /* Ensure the body takes the full viewport height */
   overflow: hidden; /* Prevent body from scrolling */
 }
 

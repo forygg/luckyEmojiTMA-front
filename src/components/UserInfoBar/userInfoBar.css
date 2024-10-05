@@ -1,4 +1,6 @@
 /* User Info Bar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 .user-info-bar {
     display: flex;
     align-items: center;
@@ -90,13 +92,14 @@
     margin-right: 5%;
 }
 
-.coin-count { /* Slightly larger font */
+.coin-count {
+    font-family: 'Inter', system-ui, sans-serif;
     font-weight: 700;
-    line-height: 13.31px;
-    letter-spacing: -0.03em;
+    line-height: 13px;
+    letter-spacing: 0.05rem;
     text-align: center;
     width: 70%;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: white;
 }
 

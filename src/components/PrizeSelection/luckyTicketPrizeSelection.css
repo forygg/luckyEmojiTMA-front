@@ -1,0 +1,67 @@
+
+.prize-selection {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-family: 'Inter', system-ui;
+
+}
+
+.prize-selection p:nth-child(1) {
+
+    text-indent: 1rem;
+    color: #E4E6EA;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    width: 95%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.prize-selection p:nth-child(1) b {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.prize-selection p:nth-child(1) b:nth-last-child(1) {
+    font-style: normal;
+    font-weight: 700;
+    color: #F5EC0A;
+
+}
+
+.prize-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.prize-cards p{
+    align-self: center;
+    font-style: normal;
+    margin: 0;
+    height: 20%;
+    width: 80%;
+    color: #E4E6EA;
+    font-size: 70%;
+    font-family: Inter, system-ui;
+    font-weight: 400;
+    line-height: 0.85rem;
+    text-align: center;
+}
+
+.prize-cards p b{
+    font-style: normal;
+    font-weight: 700;
+}
+
+.prize-cards .game-card img {
+    width: 90%;
+    height: 30%;
+    margin-top: 10%;
+}
+
+.prize-cards .game-card .game-card-divider{
+    margin-top: 3%;
+}

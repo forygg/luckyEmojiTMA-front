@@ -7,32 +7,25 @@ import Profile from './components/Profile/Profile';
 import Tasks from './components/Tasks/Tasks';
 import Leader from './components/Leader/Leader';
 import PayTable from './components/Paytable/Paytable';
-import GamePlaceholder from './components/GamePlaceholder/GamePlaceholder';
+import LuckyTicketGamePlaceholder from './components/GamePlaceholder/LuckyTicketGamePlaceholder';
 import './App.css';
 
 function App() {
     const [activeTab, setActiveTab] = useState('Games');
-    const [hasNewTasks, setHasNewTasks] = useState(false);
-    const [gameState, setGameState] = useState(null);
+    const [gameState, setGameState] = useState(false);
 
     useEffect(() => {
         const tg = window.Telegram.WebApp;
-        tg.ready();
         tg.expand(); // Expands the app to full-screen
-
-        setTimeout(() => {
-            setHasNewTasks(true);
-        }, 5000);
+        tg.ready();
     }, []);
 
-    const handleGameStart = (game) => {
-        setGameState(game);
+    const handleGameStart = () => {
+        setGameState(true);
     };
 
     const renderContent = () => {
-        if (gameState) {
-            return <GamePlaceholder game={gameState} />;
-        }
+
 
         switch (activeTab) {
             case 'Profile':
@@ -42,8 +35,15 @@ function App() {
             case 'Games':
                 return (
                     <>
-                        <GameIntroduction />
-                        <GameCards onGameStart={handleGameStart} />
+                        {gameState? (
+                            <LuckyTicketGamePlaceholder />
+                        ) : (
+                            <>
+                                <GameIntroduction />
+                                <GameCards onGameStart={handleGameStart} />
+                            </>
+                        )}
+
                     </>
                 );
             case 'Leader':
@@ -67,7 +67,7 @@ function App() {
             <div className="my-rectangle">
                 {renderContent()}
             </div>
-            <BottomNavigation onTabChange={setActiveTab} hasNewTasks={hasNewTasks} />
+            <BottomNavigation onTabChange={setActiveTab} />
         </div>
     );
 }
