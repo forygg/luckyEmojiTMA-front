@@ -1,7 +1,7 @@
 /* Ensure the parent element has position: relative */
 body {
   position: relative;
-  height: 100%; /* Ensure the body takes the full viewport height */
+  height: 95%; /* Ensure the body takes the full viewport height */
   overflow: hidden; /* Prevent body from scrolling */
 }
 
