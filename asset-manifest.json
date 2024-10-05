@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/luckyEmojiTMA-front/static/css/main.8be39b21.css",
-    "main.js": "/luckyEmojiTMA-front/static/js/main.3a6918c3.js",
+    "main.css": "/luckyEmojiTMA-front/static/css/main.48848913.css",
+    "main.js": "/luckyEmojiTMA-front/static/js/main.6c86862b.js",
     "static/js/453.6a52f192.chunk.js": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js",
     "static/media/background.jpeg": "/luckyEmojiTMA-front/static/media/background.ca661f481bff9c01bef0.jpeg",
     "static/media/ticket.svg": "/luckyEmojiTMA-front/static/media/ticket.c120d4bfeff238f95de7c0bf08791464.svg",
@@ -9,17 +9,22 @@
     "static/media/avatar.svg": "/luckyEmojiTMA-front/static/media/avatar.d4a69d14a01df8a8a4661f87fcdaf45b.svg",
     "static/media/airdrop_icon.svg": "/luckyEmojiTMA-front/static/media/airdrop_icon.76461026464e08a369eccfcf3ddb72c7.svg",
     "static/media/tasks.svg": "/luckyEmojiTMA-front/static/media/tasks.bcd053610300eb8020517f870b0432bf.svg",
-    "static/media/games.svg": "/luckyEmojiTMA-front/static/media/games.7d5d31f069ffea72d13cad379c9e9b2b.svg",
+    "static/media/tasks-active.svg": "/luckyEmojiTMA-front/static/media/tasks-active.f387792f142a7fe8922954a8a36cc9e3.svg",
+    "static/media/games.svg": "/luckyEmojiTMA-front/static/media/games.aa5ac60b5a6b9cd5f5c0405a5e5dad63.svg",
+    "static/media/games-active.svg": "/luckyEmojiTMA-front/static/media/games-active.7d5d31f069ffea72d13cad379c9e9b2b.svg",
+    "static/media/paytable-active.svg": "/luckyEmojiTMA-front/static/media/paytable-active.001a3e3a52733be83d2db3027886d150.svg",
     "static/media/paytable.svg": "/luckyEmojiTMA-front/static/media/paytable.8c38a443ebb9e538760dc46765ce0532.svg",
     "static/media/leader.svg": "/luckyEmojiTMA-front/static/media/leader.27d1e5c0889a333cfbec6fb6e5a3bd6a.svg",
+    "static/media/leader-active.svg": "/luckyEmojiTMA-front/static/media/leader-active.7821f318bcde21923bac1f800bf71a6a.svg",
+    "static/media/profile-active.svg": "/luckyEmojiTMA-front/static/media/profile-active.2b7c47fd2ef6cd45ba8f7e650ba7fd95.svg",
     "static/media/profile.svg": "/luckyEmojiTMA-front/static/media/profile.8603b90b302bad599bd3a6d5b23ad26f.svg",
     "index.html": "/luckyEmojiTMA-front/index.html",
-    "main.8be39b21.css.map": "/luckyEmojiTMA-front/static/css/main.8be39b21.css.map",
-    "main.3a6918c3.js.map": "/luckyEmojiTMA-front/static/js/main.3a6918c3.js.map",
+    "main.48848913.css.map": "/luckyEmojiTMA-front/static/css/main.48848913.css.map",
+    "main.6c86862b.js.map": "/luckyEmojiTMA-front/static/js/main.6c86862b.js.map",
     "453.6a52f192.chunk.js.map": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8be39b21.css",
-    "static/js/main.3a6918c3.js"
+    "static/css/main.48848913.css",
+    "static/js/main.6c86862b.js"
   ]
 }
