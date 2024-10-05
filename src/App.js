@@ -24,9 +24,12 @@ function App() {
         setGameState(true);
     };
 
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        setGameState(false); // Сбрасываем gameState при изменении вкладки
+    };
+
     const renderContent = () => {
-
-
         switch (activeTab) {
             case 'Profile':
                 return <Profile />;
@@ -35,7 +38,7 @@ function App() {
             case 'Games':
                 return (
                     <>
-                        {gameState? (
+                        {gameState ? (
                             <LuckyTicketGamePlaceholder />
                         ) : (
                             <>
@@ -43,7 +46,6 @@ function App() {
                                 <GameCards onGameStart={handleGameStart} />
                             </>
                         )}
-
                     </>
                 );
             case 'Leader':
@@ -67,7 +69,7 @@ function App() {
             <div className="my-rectangle">
                 {renderContent()}
             </div>
-            <BottomNavigation onTabChange={setActiveTab} />
+            <BottomNavigation onTabChange={handleTabChange} />
         </div>
     );
 }
