@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/luckyEmojiTMA-front/static/css/main.b5508fea.css",
-    "main.js": "/luckyEmojiTMA-front/static/js/main.6c86862b.js",
+    "main.css": "/luckyEmojiTMA-front/static/css/main.81aefa79.css",
+    "main.js": "/luckyEmojiTMA-front/static/js/main.eec0cc04.js",
     "static/js/453.6a52f192.chunk.js": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js",
     "static/media/background.jpeg": "/luckyEmojiTMA-front/static/media/background.ca661f481bff9c01bef0.jpeg",
     "static/media/ticket.svg": "/luckyEmojiTMA-front/static/media/ticket.c120d4bfeff238f95de7c0bf08791464.svg",
     "static/media/gc_Emoji.png": "/luckyEmojiTMA-front/static/media/gc_Emoji.de2f66c7842fb5e9c349.png",
+    "static/media/game-coin.svg": "/luckyEmojiTMA-front/static/media/game-coin.5e989470774e86c61604a127f7379a53.svg",
     "static/media/avatar.svg": "/luckyEmojiTMA-front/static/media/avatar.d4a69d14a01df8a8a4661f87fcdaf45b.svg",
     "static/media/airdrop_icon.svg": "/luckyEmojiTMA-front/static/media/airdrop_icon.76461026464e08a369eccfcf3ddb72c7.svg",
+    "static/media/ton-coin.svg": "/luckyEmojiTMA-front/static/media/ton-coin.413ed5128d8274ce6aabb428bea8e563.svg",
     "static/media/tasks.svg": "/luckyEmojiTMA-front/static/media/tasks.bcd053610300eb8020517f870b0432bf.svg",
     "static/media/tasks-active.svg": "/luckyEmojiTMA-front/static/media/tasks-active.f387792f142a7fe8922954a8a36cc9e3.svg",
     "static/media/games.svg": "/luckyEmojiTMA-front/static/media/games.aa5ac60b5a6b9cd5f5c0405a5e5dad63.svg",
@@ -19,12 +21,12 @@
     "static/media/profile-active.svg": "/luckyEmojiTMA-front/static/media/profile-active.2b7c47fd2ef6cd45ba8f7e650ba7fd95.svg",
     "static/media/profile.svg": "/luckyEmojiTMA-front/static/media/profile.8603b90b302bad599bd3a6d5b23ad26f.svg",
     "index.html": "/luckyEmojiTMA-front/index.html",
-    "main.b5508fea.css.map": "/luckyEmojiTMA-front/static/css/main.b5508fea.css.map",
-    "main.6c86862b.js.map": "/luckyEmojiTMA-front/static/js/main.6c86862b.js.map",
+    "main.81aefa79.css.map": "/luckyEmojiTMA-front/static/css/main.81aefa79.css.map",
+    "main.eec0cc04.js.map": "/luckyEmojiTMA-front/static/js/main.eec0cc04.js.map",
     "453.6a52f192.chunk.js.map": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5508fea.css",
-    "static/js/main.6c86862b.js"
+    "static/css/main.81aefa79.css",
+    "static/js/main.eec0cc04.js"
   ]
 }
