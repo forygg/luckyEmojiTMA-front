@@ -35,6 +35,17 @@ body {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-align: center;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 15px;
+  top: 75%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 
 .my-rectangle {

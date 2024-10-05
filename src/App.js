@@ -8,6 +8,7 @@ import Tasks from './components/Tasks/Tasks';
 import Leader from './components/Leader/Leader';
 import PayTable from './components/Paytable/Paytable';
 import LuckyTicketGamePlaceholder from './components/GamePlaceholder/LuckyTicketGamePlaceholder';
+import backArrowIcon from './assets/backarrowIcon.svg';
 import './App.css';
 
 function App() {
@@ -26,7 +27,11 @@ function App() {
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
-        setGameState(false); // Сбрасываем gameState при изменении вкладки
+        setGameState(false); // Reset gameState when changing tabs
+    };
+
+    const handleBackClick = () => {
+        setGameState(false); // Reset gameState when back arrow is clicked
     };
 
     const renderContent = () => {
@@ -62,9 +67,37 @@ function App() {
         }
     };
 
+    const getHeaderText = () => {
+        if (gameState) {
+            return 'Lucky Ticket';
+        }
+        switch (activeTab) {
+            case 'Profile':
+                return 'Profile';
+            case 'Tasks':
+                return 'Tasks';
+            case 'Leader':
+                return 'Leader';
+            case 'PayTable':
+                return 'PayTable';
+            default:
+                return 'Games';
+        }
+    };
+
     return (
         <div className="container">
-            <header className="header">Games</header>
+            <header className="header">
+                {gameState && (
+                    <img
+                        src={backArrowIcon}
+                        alt="Back"
+                        className="back-arrow"
+                        onClick={handleBackClick}
+                    />
+                )}
+                {getHeaderText()}
+            </header>
             <UserInfoBar />
             <div className="my-rectangle">
                 {renderContent()}
