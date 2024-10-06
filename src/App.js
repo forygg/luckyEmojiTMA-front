@@ -14,11 +14,20 @@ import './App.css';
 function App() {
     const [activeTab, setActiveTab] = useState('Games');
     const [gameState, setGameState] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const tg = window.Telegram.WebApp;
         tg.expand(); // Expands the app to full-screen
         tg.ready();
+
+        // Hide loading screen after 8 seconds
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 8000);
+
+        // Cleanup timer if the component is unmounted
+        return () => clearTimeout(timer);
     }, []);
 
     const handleGameStart = () => {
@@ -87,22 +96,31 @@ function App() {
 
     return (
         <div className="container">
-            <header className="header">
-                {gameState && (
-                    <img
-                        src={backArrowIcon}
-                        alt="Back"
-                        className="back-arrow"
-                        onClick={handleBackClick}
-                    />
-                )}
-                {getHeaderText()}
-            </header>
-            <UserInfoBar />
-            <div className="my-rectangle">
-                {renderContent()}
-            </div>
-            <BottomNavigation onTabChange={handleTabChange} />
+            {isLoading ? (
+                // Loading screen with just a background
+                <div className="loading-screen">
+                    {/* Add any content like a loading spinner if needed */}
+                </div>
+            ) : (
+                <>
+                    <header className="header">
+                        {gameState && (
+                            <img
+                                src={backArrowIcon}
+                                alt="Back"
+                                className="back-arrow"
+                                onClick={handleBackClick}
+                            />
+                        )}
+                        {getHeaderText()}
+                    </header>
+                    <UserInfoBar />
+                    <div className="my-rectangle">
+                        {renderContent()}
+                    </div>
+                    <BottomNavigation onTabChange={handleTabChange} />
+                </>
+            )}
         </div>
     );
 }
