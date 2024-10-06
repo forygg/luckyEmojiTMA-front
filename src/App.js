@@ -14,12 +14,16 @@ import './App.css';
 function App() {
     const [activeTab, setActiveTab] = useState('Games');
     const [gameState, setGameState] = useState(false);
+    const [userName, setUserName] = useState('username');
 
     useEffect(() => {
         const tg = window.Telegram.WebApp;
         tg.expand(); // Expands the app to full-screen
         tg.ready();
+        setUserName(tg.initDataUnsafe.username);
     }, []);
+
+    console.log(userName);
 
     const handleGameStart = () => {
         setGameState(true);
