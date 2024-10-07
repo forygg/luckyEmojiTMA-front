@@ -8,12 +8,14 @@ import Tasks from './components/Tasks/Tasks';
 import Leader from './components/Leader/Leader';
 import PayTable from './components/Paytable/Paytable';
 import LuckyTicketGamePlaceholder from './components/GamePlaceholder/LuckyTicketGamePlaceholder';
+import LuckyEmojiGame from './components/LuckyEmojiGame/LuckyEmojiGame';
 import backArrowIcon from './assets/backarrowIcon.svg';
 import './App.css';
 
 function App() {
     const [activeTab, setActiveTab] = useState('Games');
     const [gameState, setGameState] = useState(false);
+    const [activeGame, setActiveGame] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -24,26 +26,40 @@ function App() {
         // Hide loading screen after 8 seconds
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 8000);
+        }, 4000);
 
         // Cleanup timer if the component is unmounted
         return () => clearTimeout(timer);
     }, []);
 
-    const handleGameStart = () => {
+    const handleGameStart = (game) => {
         setGameState(true);
+        setActiveGame(game);
     };
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
         setGameState(false); // Reset gameState when changing tabs
+        setActiveGame(null); // Reset activeGame when changing tabs
     };
 
     const handleBackClick = () => {
         setGameState(false); // Reset gameState when back arrow is clicked
+        setActiveGame(null); // Reset activeGame when back arrow is clicked
     };
 
     const renderContent = () => {
+        if (gameState) {
+            switch (activeGame) {
+                case 'LuckyTicket':
+                    return <LuckyTicketGamePlaceholder />;
+                case 'LuckyEmoji':
+                    return <LuckyEmojiGame />;
+                default:
+                    return null;
+            }
+        }
+
         switch (activeTab) {
             case 'Profile':
                 return <Profile />;
@@ -52,14 +68,8 @@ function App() {
             case 'Games':
                 return (
                     <>
-                        {gameState ? (
-                            <LuckyTicketGamePlaceholder />
-                        ) : (
-                            <>
-                                <GameIntroduction />
-                                <GameCards onGameStart={handleGameStart} />
-                            </>
-                        )}
+                        <GameIntroduction />
+                        <GameCards onGameStart={handleGameStart} />
                     </>
                 );
             case 'Leader':
@@ -78,7 +88,14 @@ function App() {
 
     const getHeaderText = () => {
         if (gameState) {
-            return 'Lucky Ticket';
+            switch (activeGame) {
+                case 'LuckyTicket':
+                    return 'Lucky Ticket';
+                case 'LuckyEmoji':
+                    return 'Lucky Emoji';
+                default:
+                    return 'Games';
+            }
         }
         switch (activeTab) {
             case 'Profile':

@@ -10,13 +10,13 @@ const GameCards = ({ onGameStart }) => {
                 icon={ticket}
                 description="Win every hour! Guaranteed prize for all participants."
                 title="LuckyTicket"
-                onClick={() => onGameStart({ title: "LuckyTicket", icon: ticket })}
+                onClick={() => onGameStart('LuckyTicket')}
             />
             <GameCard
                 title="LuckyEmoji"
                 description="How fast are you? Catch several Emoji in a row, at least three."
                 icon={Emoji}
-                onClick={() => onGameStart({ title: "LuckyEmoji", icon: Emoji })}
+                onClick={() => onGameStart('LuckyEmoji')}
             />
         </div>
     );

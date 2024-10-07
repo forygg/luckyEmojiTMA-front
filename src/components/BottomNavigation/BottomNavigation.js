@@ -25,7 +25,7 @@ const BottomNavigation = ({ onTabChange, hasNewTasks }) => {
 
     return (
         <div className="bottom-navigation">
-            <div className="nav-item" onClick={() => handleTabClick('Profile')}>
+            <div className={"nav-item"} onClick={() => handleTabClick('Profile')}>
                 <img src={getIcon('Profile', profileIcon, profileIconActive)} alt="Profile" className="nav-icon" />
                 <p className={activeTab === 'Profile' ? 'nav-text-selected' : 'nav-text'}>Profile</p>
             </div>
