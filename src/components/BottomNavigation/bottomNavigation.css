@@ -18,23 +18,29 @@
     transition: transform 0.2s;
 }
 
-.nav-item:hover .nav-icon,
-.nav-item:hover .nav-text,
-.nav-item:hover .red-dot,
-.nav-text-selected + .nav-icon,
-.nav-text-selected + .red-dot {
-    transform: scale(1.2);
+.nav-item .nav-icon,
+.nav-item .nav-text {
+    transform: scale(1);
+    transition: transform 0.3s ease; /* Add smooth scaling transition */
+}
+
+.nav-item.active .nav-icon,
+.nav-item.active .nav-text {
+    transform: scale(1.2); /* Scale when active */
+}
+
+.nav-text.active {
+    font-weight: bold;
 }
 
 .red-dot {
     position: absolute;
-    top: -2px;
-    right: 2px;
+    top: 0;
+    right: 0;
     width: 8px;
     height: 8px;
-    background-color: #FC3C3C;
+    background-color: red;
     border-radius: 50%;
-    transition: transform 0.2s;
 }
 
 .nav-item {
@@ -59,7 +65,7 @@
     transition: transform 0.2s;
 }
 
-p.nav-text-selected {
+p.nav-text.active{
     color: #E4E6EA;
     transform: scale(1.2);
 }
