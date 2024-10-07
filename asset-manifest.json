@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/luckyEmojiTMA-front/static/css/main.95fd8e01.css",
-    "main.js": "/luckyEmojiTMA-front/static/js/main.fd37cf12.js",
+    "main.css": "/luckyEmojiTMA-front/static/css/main.c1d0c5c3.css",
+    "main.js": "/luckyEmojiTMA-front/static/js/main.2f784f9e.js",
     "static/js/453.6a52f192.chunk.js": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js",
     "static/media/background.jpeg": "/luckyEmojiTMA-front/static/media/background.ca661f481bff9c01bef0.jpeg",
     "static/media/ticket.svg": "/luckyEmojiTMA-front/static/media/ticket.c120d4bfeff238f95de7c0bf08791464.svg",
     "static/media/gc_Emoji.png": "/luckyEmojiTMA-front/static/media/gc_Emoji.de2f66c7842fb5e9c349.png",
+    "static/media/spins-icon.svg": "/luckyEmojiTMA-front/static/media/spins-icon.4a8aa04e23f7c79384b5625e2939342d.svg",
+    "static/media/jackpot-icon.svg": "/luckyEmojiTMA-front/static/media/jackpot-icon.64e215683f87c87d7f230472fe287e6b.svg",
     "static/media/game-coin.svg": "/luckyEmojiTMA-front/static/media/game-coin.5e989470774e86c61604a127f7379a53.svg",
     "static/media/avatar.svg": "/luckyEmojiTMA-front/static/media/avatar.d4a69d14a01df8a8a4661f87fcdaf45b.svg",
     "static/media/airdrop_icon.svg": "/luckyEmojiTMA-front/static/media/airdrop_icon.76461026464e08a369eccfcf3ddb72c7.svg",
@@ -22,12 +24,12 @@
     "static/media/profile.svg": "/luckyEmojiTMA-front/static/media/profile.8603b90b302bad599bd3a6d5b23ad26f.svg",
     "index.html": "/luckyEmojiTMA-front/index.html",
     "static/media/backarrowIcon.svg": "/luckyEmojiTMA-front/static/media/backarrowIcon.bd74b779fbe66bfd5700df2dabc94628.svg",
-    "main.95fd8e01.css.map": "/luckyEmojiTMA-front/static/css/main.95fd8e01.css.map",
-    "main.fd37cf12.js.map": "/luckyEmojiTMA-front/static/js/main.fd37cf12.js.map",
+    "main.c1d0c5c3.css.map": "/luckyEmojiTMA-front/static/css/main.c1d0c5c3.css.map",
+    "main.2f784f9e.js.map": "/luckyEmojiTMA-front/static/js/main.2f784f9e.js.map",
     "453.6a52f192.chunk.js.map": "/luckyEmojiTMA-front/static/js/453.6a52f192.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95fd8e01.css",
-    "static/js/main.fd37cf12.js"
+    "static/css/main.c1d0c5c3.css",
+    "static/js/main.2f784f9e.js"
   ]
 }
