@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import './leader.css'; // Make sure this is where the CSS is stored
 
 const Leader = () => {
@@ -17,14 +17,15 @@ const Leader = () => {
 
     const [leaders, setLeaders] = useState(mockData);
 
-    // useEffect(() => {
-    //     fetchLeaders();
-    // });
-    //
-    // const fetchLeaders = () => {
-    //     //TODO: Fetch leaders data
-    //     setLeaders(mockData);
-    // };
+
+    useEffect(() => {
+         fetchLeaders();
+    });
+
+    const fetchLeaders = () => {
+        //TODO: Fetch leaders data
+        setLeaders(mockData);
+    };
 
     return (
         <div className="leaderboard-container">
