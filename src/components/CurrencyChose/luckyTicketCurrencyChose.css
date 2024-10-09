@@ -1,7 +1,7 @@
 
 .prize-selection {
     text-align: center;
-    padding: 1rem 1.5rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     color: white;
     font-family: 'Inter', system-ui;
 
@@ -31,9 +31,14 @@
 
 }
 
+.prize-selection center {
+    padding-right: 0.5rem;
+}
+
 .prize-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     margin-top: 2rem;
 }
 

@@ -7,54 +7,72 @@ import Profile from './components/Profile/Profile';
 import Tasks from './components/Tasks/Tasks';
 import Leader from './components/Leader/Leader';
 import PayTable from './components/Paytable/Paytable';
-import LuckyTicketGamePlaceholder from './components/GamePlaceholder/LuckyTicketGamePlaceholder';
+import LuckyTicketCurrencyChose from './components/CurrencyChose/LuckyTicketCurrencyChose';
 import LuckyEmojiGame from './components/LuckyEmojiGame/LuckyEmojiGame';
 import backArrowIcon from './assets/backarrowIcon.svg';
 import './App.css';
+import LuckyTicketCoins from "./components/LuckyTicketCoins/LuckyTicketCoins";
+import LuckyTicketTons from "./components/LuckyTicketTons/LuckyTicketTons";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Games');
     const [gameState, setGameState] = useState(false);
     const [activeGame, setActiveGame] = useState(null);
+    const [previousGame, setPreviousGame] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const tg = window.Telegram.WebApp;
-        tg.expand(); // Expands the app to full-screen
+        tg.expand();
         tg.ready();
 
-        // Hide loading screen after 8 seconds
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 4000);
 
-        // Cleanup timer if the component is unmounted
         return () => clearTimeout(timer);
     }, []);
 
     const handleGameStart = (game) => {
+        setPreviousGame(activeGame);
         setGameState(true);
         setActiveGame(game);
+        console.log('Game started:', game);
+    };
+
+    const handleCurrencySelect = (currency) => {
+        setPreviousGame(activeGame);
+        setActiveGame(currency);
     };
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
-        setGameState(false); // Reset gameState when changing tabs
-        setActiveGame(null); // Reset activeGame when changing tabs
+        setGameState(false);
+        setActiveGame(null);
+        setPreviousGame(null);
     };
 
     const handleBackClick = () => {
-        setGameState(false); // Reset gameState when back arrow is clicked
-        setActiveGame(null); // Reset activeGame when back arrow is clicked
+        if (previousGame) {
+            setActiveGame(previousGame);
+            setPreviousGame(null);
+        } else {
+            setGameState(false);
+            setActiveGame(null);
+        }
     };
 
     const renderContent = () => {
         if (gameState) {
             switch (activeGame) {
                 case 'LuckyTicket':
-                    return <LuckyTicketGamePlaceholder />;
+                    return <LuckyTicketCurrencyChose onCurrencySelect={handleCurrencySelect} />;
                 case 'LuckyEmoji':
                     return <LuckyEmojiGame />;
+                case 'LuckyTicketCoins':
+                    return <LuckyTicketCoins />;
+                case 'LuckyTicketTons':
+                    return <LuckyTicketTons />;
                 default:
                     return null;
             }
@@ -93,6 +111,10 @@ function App() {
                     return 'Lucky Ticket';
                 case 'LuckyEmoji':
                     return 'Lucky Emoji';
+                case 'LuckyTicketCoins':
+                    return 'Lucky Ticket Coins';
+                case 'LuckyTicketTons':
+                    return 'Lucky Ticket Ton';
                 default:
                     return 'Games';
             }
@@ -114,9 +136,7 @@ function App() {
     return (
         <div className="container">
             {isLoading ? (
-                // Loading screen with just a background
                 <div className="loading-screen">
-                    {/* Add any content like a loading spinner if needed */}
                 </div>
             ) : (
                 <>

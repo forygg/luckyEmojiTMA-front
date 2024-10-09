@@ -9,10 +9,10 @@ const GameCard = ({ title, description, icon, buttonText, buttonIcon, onClick })
             {title ? (
                 <h3>{title}</h3>
             ) : (
-                <button className="game-card-button">
+                <div className="game-card-button">
                     <span className="button-text">{buttonText}</span>
                     <img src={buttonIcon} alt="button icon" className="button-icon" />
-                </button>
+                </div>
             )}
         </div>
     );
