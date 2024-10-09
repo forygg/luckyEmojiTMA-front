@@ -26,6 +26,12 @@ function App() {
         tg.expand();
         tg.ready();
 
+        // Check if the page has been reloaded before
+        if (!sessionStorage.getItem('reloaded')) {
+            sessionStorage.setItem('reloaded', 'true');
+            window.location.reload();
+        }
+
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 4000);
