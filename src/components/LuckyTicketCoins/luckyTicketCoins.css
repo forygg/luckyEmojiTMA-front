@@ -153,7 +153,7 @@
 }
 
 .ticket-buying-information-motivation img{
-    width: 85%;
+    width: 110px;
 }
 
 .ticket-buying-divider {
@@ -219,7 +219,8 @@
 }
 
 .bought-ticket-info {
-    width: 45%;
+    flex: 2;
+    margin-right: 1rem;
 }
 
 
@@ -239,6 +240,7 @@
 
 .ticket-finish {
     color: #0D7404;
+
 }
 
 
@@ -252,7 +254,7 @@
 }
 
 .ticket-image {
-    width: 100%;
+    width: 110px;
 }
 
 .ticket-number, .ticket-username {
