@@ -294,14 +294,26 @@
         width: 0.8rem;
         height: 0.8rem;
     }
+    .ticket-username{
+        bottom: 9px;
+    }
 }
 
-@media (max-width: 314px) {
+
+
+@media (max-width: 320px) {
     .ticket-buying-button p {
         font-size: 0.4rem;
     }
     .ticket-buying-button img {
         width: 0.7rem;
         height: 0.7rem;
+    }
+    .ticket-username{
+        font-size: 4px;
+        bottom: 8px;
+    }
+    .ticket-number {
+        font-size: 5px;
     }
 }

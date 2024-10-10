@@ -19,7 +19,7 @@ const LuckyTicketTons = () => {
 
     const fetchFundAmount = () => {
         //TODO: fetch the fund amount from the backend
-        let fundAmount = 10.35;
+        let fundAmount = 10.34;
         return fundAmount.toLocaleString('ru-RU');
     }
 
