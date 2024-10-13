@@ -15,7 +15,7 @@ const CustomDialog = ({ isOpen, onClose, onConfirm }) => {
         <>
             {showSuccess && (
                 <SuccessMessage
-                    message="Success! You’re in the game. 0.05 TonCoins have been deducted from your Game Balance."
+                    message="Success! You’re in the game. Transactions on the TON network can sometimes take up to 2 minutes. Your ticket will be displayed once the payment is confirmed."
                     onClose={() => setShowSuccess(false)}
                 />
             )}
