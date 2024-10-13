@@ -2,22 +2,26 @@ import React, { useState, useEffect, useRef } from 'react';
 import tonCoin from '../../assets/ton-coin.svg';
 import gameTicket from '../../assets/ticket.svg';
 import gameUserTicket from '../../assets/ticket-username.svg';
+import CustomDialog from './confirmDialog/CustomDialog';
+import WalletNotConnectedDialog from './confirmDialog/WalletNotConnectedDialog/WalletNotConnectedDialog';
 import './luckyTicketTons.css';
 
 const LuckyTicketTons = () => {
     let username = '@username';
-    const [boughtTickets, setBoughtTickets] = useState(() => {
-        const savedTickets = localStorage.getItem('boughtTicketsTons');
+    const [boughtTonsTickets, setBoughtTonsTickets] = useState(() => {
+        const savedTickets = localStorage.getItem('boughtTonsTickets');
         return savedTickets ? JSON.parse(savedTickets) : [];
     });
-    const [timersRestored, setTimersRestored] = useState(false);
-    const timerRefs = useRef({});
+    const [tonsTimersRestored, setTonsTimersRestored] = useState(false);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [isWalletNotConnectedDialogOpen, setIsWalletNotConnectedDialogOpen] = useState(false);
+    const tonsTimerRefs = useRef({});
 
     useEffect(() => {
-        localStorage.setItem('boughtTicketsTons', JSON.stringify(boughtTickets));
-    }, [boughtTickets]);
+        localStorage.setItem('boughtTonsTickets', JSON.stringify(boughtTonsTickets));
+    }, [boughtTonsTickets]);
 
-    const fetchFundAmount = () => {
+    const fetchTonsFundAmount = () => {
         //TODO: fetch the fund amount from the backend
         let fundAmount = 10.34;
         return fundAmount.toLocaleString('ru-RU');
@@ -27,14 +31,27 @@ const LuckyTicketTons = () => {
         return Math.floor(10000000 + Math.random() * 90000000).toString();
     }
 
-    const handleBuyTicket = () => {
-        const endTime = Date.now() + 10000; // 10 seconds from now
+    const isWalletConnected = () => {
+        return Math.random() < 0.5;
+    }
+
+    const handleBuyTonsTicket = () => {
+        if (isWalletConnected()) {
+            setIsDialogOpen(true);
+        } else {
+            setIsWalletNotConnectedDialogOpen(true);
+        }
+    }
+
+    const confirmBuyTonsTicket = () => {
+        setIsDialogOpen(false);
+        const endTime = Date.now() + 15000; // 15 seconds from now
         const newTicket = {
             number: generateTonsTicketNumber(),
             endTime: endTime,
-            timeLeft: 10000 // Initialize with 10 seconds
+            timeLeft: 15000 // Initialize with 15 seconds
         };
-        setBoughtTickets([...boughtTickets, newTicket]);
+        setBoughtTonsTickets([...boughtTonsTickets, newTicket]);
         startTonsTimer(newTicket.number, endTime);
     }
 
@@ -44,13 +61,13 @@ const LuckyTicketTons = () => {
 
         const updateTimer = () => {
             const timeLeft = endTime - Date.now();
-            setBoughtTickets(prevTickets => prevTickets.map(ticket =>
+            setBoughtTonsTickets(prevTickets => prevTickets.map(ticket =>
                 ticket.number === ticketNumber ? { ...ticket, timeLeft: Math.max(timeLeft, 0) } : ticket
             ));
             if (timeLeft > 0) {
-                timerRefs.current[ticketNumber] = setTimeout(updateTimer, 1000);
+                tonsTimerRefs.current[ticketNumber] = setTimeout(updateTimer, 1000);
             } else {
-                clearTimeout(timerRefs.current[ticketNumber]);
+                clearTimeout(tonsTimerRefs.current[ticketNumber]);
                 // TODO: Announce the winning ticket
                 console.log('Time to announce the winning ticket!');
             }
@@ -60,18 +77,18 @@ const LuckyTicketTons = () => {
     };
 
     useEffect(() => {
-        if (!timersRestored) {
-            boughtTickets.forEach(ticket => {
+        if (!tonsTimersRestored) {
+            boughtTonsTickets.forEach(ticket => {
                 const endTime = localStorage.getItem(`endTimeTons_${ticket.number}`);
                 if (endTime) {
                     startTonsTimer(ticket.number, parseInt(endTime, 10));
                 }
             });
-            setTimersRestored(true);
+            setTonsTimersRestored(true);
         }
-    }, [timersRestored, boughtTickets]);
+    }, [tonsTimersRestored, boughtTonsTickets]);
 
-    const formatTime = (milliseconds) => {
+    const formatTonsTime = (milliseconds) => {
         const totalSeconds = Math.floor(milliseconds / 1000);
         const hours = Math.floor(totalSeconds / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -79,10 +96,10 @@ const LuckyTicketTons = () => {
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }
 
-    const handleClearStorage = () => {
-        localStorage.removeItem('boughtTicketsTons');
-        setBoughtTickets([]);
-        Object.values(timerRefs.current).forEach(clearInterval);
+    const handleClearTonsStorage = () => {
+        localStorage.removeItem('boughtTonsTickets');
+        setBoughtTonsTickets([]);
+        Object.values(tonsTimerRefs.current).forEach(clearInterval);
     }
 
     return (
@@ -114,7 +131,7 @@ const LuckyTicketTons = () => {
                     <p>Fund</p>
                     <div className="fundDivider"></div>
                     <img src={ tonCoin } alt="coin" />
-                    <p className="fundAmount">{ fetchFundAmount() }</p>
+                    <p className="fundAmount">{ fetchTonsFundAmount() }</p>
                 </div>
                 <div className="ticket-buying">
                     <div className="ticket-buying-information">
@@ -138,14 +155,14 @@ const LuckyTicketTons = () => {
                         </div>
                     </div>
                     <div className="ticket-buying-divider"></div>
-                    <div className="ticket-buying-button" onClick={handleBuyTicket}>
+                    <div className="ticket-buying-button" onClick={handleBuyTonsTicket}>
                         <img src={ tonCoin } alt="coin" />
                         <p>0,05 Buy</p>
                     </div>
                 </div>
             </div>
             <div className="bought-tickets">
-                {boughtTickets.map((ticket, index) => (
+                {boughtTonsTickets.map((ticket, index) => (
                     <div key={index} className="bought-ticket">
                         <div className="ticket-container">
                             <img src={gameUserTicket} alt="ticket" className="ticket-image"/>
@@ -161,7 +178,7 @@ const LuckyTicketTons = () => {
                             </p>
                             <div className="countdown-timer">
                                 {ticket.timeLeft > 0 ? (
-                                    <p>{formatTime(ticket.timeLeft)}</p>
+                                    <p>{formatTonsTime(ticket.timeLeft)}</p>
                                 ) : (
                                     <p className="ticket-finish">Finished</p>
                                 )}
@@ -170,7 +187,16 @@ const LuckyTicketTons = () => {
                     </div>
                 ))}
             </div>
-            <button onClick={handleClearStorage}>Clear Storage</button>
+            <button onClick={handleClearTonsStorage}>Clear Storage</button>
+            <CustomDialog
+                isOpen={isDialogOpen}
+                onClose={() => setIsDialogOpen(false)}
+                onConfirm={confirmBuyTonsTicket}
+            />
+            <WalletNotConnectedDialog
+                isOpen={isWalletNotConnectedDialogOpen}
+                onClose={() => setIsWalletNotConnectedDialogOpen(false)}
+            />
         </>
     );
 };

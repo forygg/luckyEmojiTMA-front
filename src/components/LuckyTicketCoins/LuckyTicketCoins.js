@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import gameCoin from '../../assets/game-coin.svg';
 import gameTicket from '../../assets/ticket.svg';
 import gameUserTicket from '../../assets/ticket-username.svg';
+import CustomDialog from './confirmDialog/CustomDialog';
 import './luckyTicketCoins.css';
 
 const LuckyTicketCoins = () => {
@@ -11,6 +12,7 @@ const LuckyTicketCoins = () => {
         return savedTickets ? JSON.parse(savedTickets) : [];
     });
     const [timersRestored, setTimersRestored] = useState(false);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
     const timerRefs = useRef({});
 
     useEffect(() => {
@@ -28,6 +30,11 @@ const LuckyTicketCoins = () => {
     }
 
     const handleBuyTicket = () => {
+        setIsDialogOpen(true);
+    }
+
+    const confirmBuyTicket = () => {
+        setIsDialogOpen(false);
         const endTime = Date.now() + 10000; // 10 seconds from now
         const newTicket = {
             number: generateTicketNumber(),
@@ -171,6 +178,11 @@ const LuckyTicketCoins = () => {
                 ))}
             </div>
             <button onClick={handleClearStorage}>Clear Storage</button>
+            <CustomDialog
+                isOpen={isDialogOpen}
+                onClose={() => setIsDialogOpen(false)}
+                onConfirm={confirmBuyTicket}
+            />
         </>
     );
 };
