@@ -19,6 +19,7 @@
     width: 28%;
     border-radius: 28px;
     padding: 0.5rem 0.2rem 0.5rem 0.7rem;
+
 }
 
 .balance-coins img, .balance-jackpot img, .balance-spins img,
@@ -44,21 +45,18 @@
 .balance-coins{
     background: #FD000040;
     border: 2px solid #b34242;
-    backdrop-filter: blur(2px);
     box-shadow: 0 0 3px 1px #b34242, inset 0 0 3px 1px #b34242;
 }
 
 .balance-jackpot{
     background: #0BF90640;
     border: 2px solid #58bd1e;
-    backdrop-filter: blur(2px);
     box-shadow: 0 0 3px 1px #58bd1e, inset 0 0 3px 1px #58bd1e;
 }
 
 .balance-spins{
     background: #0038FF40;
     border: 2px solid #2661ae;
-    backdrop-filter: blur(2px);
     box-shadow: 0 0 3px 1px #2661ae, inset 0 0 3px 1px #2661ae;
 }
 

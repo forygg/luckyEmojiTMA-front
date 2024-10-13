@@ -56,7 +56,6 @@
     background: #FBF33463;
     border: 2px solid #AEF554;
     border-radius: 32px;
-    backdrop-filter: blur(2px);
     box-shadow: 0 0 3px 1px #58bd1e, inset 0 0 3px 1px #58bd1e;
 }
 
@@ -103,7 +102,6 @@
     background: #210435B2;
     border-radius: 20px;
     border: 1px solid #1F2891;
-    backdrop-filter: blur(1px);
     box-shadow: 0 0 30px -13px #F2DB0AFC;
 }
 
